@@ -14,22 +14,22 @@
 \newpage
 
 % 2 - missions
+% MPP
 \section {Objectifs et réalisation de mes missions}
 \subsection {MPP Dashboard}
 \subsubsection {Le contexte}
 \paragraph {}
 Atos a une plateforme en ligne, My Atos, sur laquelle tous les employés doivent 
 renseigner leurs informations personnelles ainsi que leurs parcours professionel et 
-académique. Le problème de cette procédure qui est en théorie obligatoire et que 
+académique. Le problème de cette procédure, qui est en théorie obligatoire, est qu' 
 une partie importante des salariés ne remplissent pas ces informations, et la plupart 
-du temps cela est dû à un simple oubli. Pour remédier à cela le service RH et la 
-hiérarchie et la direction général d'Atos décidèrent de lancer un projet interne 
-qui permetterait de relancer les employés à partir d'un fichier excel de tous les 
-collaborateurs et leurs informations fournit par le service RH, ce projet fut baptisé 
-MPP Dashboard.
+du temps cela est dû à un simple oubli. Pour y remédier, le service RH et la direction 
+général d'Atos décidèrent de lancer un projet interne qui permetterait de relancer 
+les employés automatiquement à partir d'un fichier excel contenant les informations 
+de tous les collaborateurs, fournit par le service RH. Ce projet fut baptisé MPP Dashboard.
 
 \paragraph {} 
-Le projet est une application web dont le fonctionnement repose sur trois processus
+Le projet est une application web(TODO) dont le fonctionnement repose sur trois processus
 principaux : 
 \begin {enumerate}
   \item 
@@ -38,7 +38,7 @@ principaux :
     manière à ce que les informations qu'il contient puissent être manipuler 
     programmatiquement.
   \item 
-    Le filtrage : Une fois les donnés des collaborateurs dans notre application, ont
+    Le filtrage : Une fois les donnés des collaborateurs dans notre application, on
     sauvegarde dans une base de donnée uniquement ceux dont le taux de renseignement 
     d'informations et en-dessous d'un seuil défini par les administrateurs de 
     l'application. Le taux par défaut est de 90\%. 
@@ -54,7 +54,36 @@ principaux :
   \includegraphics[width=\textwidth] {mpp-diagram.png}
   \caption {Diagram du fonctionnement de MPP Dashboard}
 \end{figure}
+\paragraph {}
+Les technologies utilisés pour la réalisation du projet sont : 
+\begin {itemize}
+\item   
+  Pour la base de données : PostgreSQL (TODO)
+\item 
+  Pour le serveur backend (TODO) : ExpressJS (TODO)
+\item 
+  Pour l'interface grahique : ReactJS (TODO)
+\end {itemize}
+
 \subsubsection{La problèmatique}
+Lorsque je suis arrivé sur le projet, celui-ci a déjà été développé mais avait un 
+problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie (TODO)
+utilisée pour remplir cette tâche, du nom d'Excellente, a été développée en interne par des 
+employés d'Atos et comporte certains inconvenients : 
+\begin{itemize}
+  \item 
+    Il comporte plusieurs bugs (TODO). Cela est notamment dû au fait que cette librairie 
+    n'est pas connue du grand publique et ne reçoit donc pas un grand nombre de tests et 
+    de contributions 
+  \item 
+    La librairie devient exponentiellement lente avec la grandeur du fichier excel. Hors
+    celui qu'on a à extraire fait plus de 40 000 lignes
+\end{itemize}
+Ma tâche est donc de trouver une solution qui puisse répondre à la fois aux problèmes
+de vitesse et de fiabilité.
+\newpage
+\subsubsection{Les solutions possibles}
+
 \end{sloppypar}
 \end{document}
 
