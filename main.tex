@@ -66,6 +66,7 @@ Les technologies utilisés pour la réalisation du projet sont :
 \end {itemize}
 
 \subsubsection{La problèmatique}
+\paragraph {}
 Lorsque je suis arrivé sur le projet, celui-ci a déjà été développé mais avait un 
 problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie (TODO)
 utilisée pour remplir cette tâche, du nom d'Excellente, a été développée en interne par des 
@@ -83,7 +84,56 @@ Ma tâche est donc de trouver une solution qui puisse répondre à la fois aux p
 de vitesse et de fiabilité.
 \newpage
 \subsubsection{Les solutions possibles}
-
+\paragraph {}
+Afin d'accomplir ma mission j'ai étudié plusieurs possibilités : 
+\begin{itemize}
+  \item 
+    Garder la librairie Excellente et essayer de gommer ces défauts en modifiant
+    son implémentation, voir même la librairie en elle-même. 
+    Le risque est que cela prenne trop de temps ou même que cela n'aboutisse tous 
+    simplement pas. Du fait de l'utilisation limitée d'Excellente et du manque de documentation 
+    techique, corriger la librairie pourrait prendre des mois alors que la direction d'Atos 
+    attendait des résultats dans les semaines suivant mon arrivé.
+  \item 
+    Utiliser un script Python (TODO). Lors de mes différents cours en Data au sein de l'IMT Nord 
+    Europe, l'une des compétences que j'ai acquis est le traitement de données par le biais 
+    de script Python en utilisant des librairies tels que Panda (TODO). Les performances 
+    seraient des ordres de grandeurs meilleurs que celle de n'importe quelle autre solution 
+    implémentée en Javascript (TODO), et l'écriture du script peut se faire en une journée. 
+    La difficulté est l'implémentation du pont entre le serveur ExpressJS et le script Python. 
+    Celui-ci doit être exécuter au bon moment par le serveur, et ce dernier doit pouvoir 
+    récupérer le résultat final. Il y avait aussi la problématique des dépendances(TODO) spécifique
+    à Python dont a besoin un tel script qui rajouterait une couche de compléxité au projet ExpressJS, au 
+    développement mais surtout à la maintenance.
+  \item 
+    Utiliser une autre librairie Javascript, ExcelJS(TODO). ExcelJS est sans aucun doute 
+    la librairie Javascript la plus utilisée pour le traitement d'excel. Un avantage très important 
+    d'une librairie aussi connue est sa documentation riche qui m'a permis de faire des premiers 
+    tests rapidements. De ces expérimentations j'en avais conclu que la fiabilité était 
+    satisfasante et que la vitesse était tout à fait convenable pour notre application, même si 
+    plus lente que le script Python. Cette solution fut donc retenu.
+\end{itemize}
+\newpage
+\subsubsection{La réalisation de la mission}
+\paragraph{}
+La mise en œuvre de la solution fut assez simple dans son ensemble en grande partie 
+grâce à l'excellente documentation d'ExcelJS. La seule difficulté rencontrée a été la gestion 
+des erreurs dans l'excel. En effet celui-ci comporte des formules qui dans certains cas retournent
+des erreurs. Mon implémentation a donc dû prendre en compte ces cas de figures là. Après cela j'ai pu 
+procéder à une série de tests sur mon ordinateur personnel, le traitement de l'excel comportant 40 000
+lignes a duré dans les alentours des 1 minutes et 45 secondes. Il était temps de déployer ma solution 
+en production.
+\subsubsection{Résultats et bilan}
+\paragraph{}
+Après quelques ajustements mon algorithme de traitement obtenait les résultats escomptés.
+Le temps d'exécution de moins de 2 minutes jugés satisfasant. 
+\linebreak 
+Avec plus de temps une implémentation du script Python aurait été possible, permettant de réduire encore
+plus le temps de traitement. Néanmoins je pense avoir pu obtenir le meilleur résultat possible 
+compte tenu de la contrainte temporelle.
+\paragraph{}
+Cette première mission fut l'opportunité pour moi de prouver à la fois mes compétences techniques
+mais surtout mes capacités à prendre des initiatives et à les mettre en œuvre.
 \end{sloppypar}
 \end{document}
 
