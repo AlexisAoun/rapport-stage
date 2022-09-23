@@ -17,8 +17,7 @@
 % MPP
 \section {Objectifs et réalisation de mes missions}
 \subsection {MPP Dashboard}
-\subsubsection {Le contexte}
-\paragraph {}
+\subsubsection {Le contexte} \paragraph {}
 Atos a une plateforme en ligne, My Atos, sur laquelle tous les employés doivent 
 renseigner leurs informations personnelles ainsi que leurs parcours professionel et 
 académique. Le problème de cette procédure, qui est en théorie obligatoire, est qu' 
@@ -134,6 +133,52 @@ compte tenu de la contrainte temporelle.
 \paragraph{}
 Cette première mission fut l'opportunité pour moi de prouver à la fois mes compétences techniques
 mais surtout mes capacités à prendre des initiatives et à les mettre en œuvre.
+
+%Tickeratops
+\newpage
+\subsection{Tickeratops}
+\subsubsection{Le contexte}
+\paragraph{}
+Comme mentionné dans la partie décrivant le contexte de réalisation de mon stage, j'ai évolué 
+dans l'entité Cloud Apps \& Data, ou CAD. Celle-ci est composée principalement de deux corps 
+de métier, les développeurs et les devOps(TODO) qui travaillent ensemble afin de concevoir 
+et déployer les solutions efficacement.
+\paragraph{}
+Cependant un problème récurrent apparait au sein de l'entité : la communication entre ces deux 
+groupes. En théorie un canal de communication sur la plateforme Teams (TODO) est dédié à l'échange 
+entre développeur et devOps, mais le manque de formalisme et la forte pression que peuvent 
+subir les devOps engendre un temps d'attente prolongé pour le traitement des demandes des développeurs
+qui en conséquence décident souvent de court-circuiter Teams et de communiquer directement
+avec les devOps soit en personnne soit par message privé. Cela à pour effet d'aggraver les problèmes
+d'organisations et de suivi des demandes. 
+\paragraph{}
+Il y a aussi un second axe d'amélioration qui est l'optimisation du temps de travail des devOps. 
+Un certains nombres de leurs tâches s'avèrerent être répétitives, tel que le redémarage, la suprresion,
+ou le déploiement de serveurs. 
+\paragraph{}
+Afin de répondre à ces deux problématiques les équipes du CAD ont décidé de développer une application web,
+Tickeratops, qui aura un système de tickets pour les demandes des développeurs, lesquels pourront être
+traités et suivis par les devOps avec plusieurs status (à faire, en cours de traitement, bloqué, terminé)
+et qui seront affichés sous forme de kanban. L'autre fonctionnalité principale qui la distingue des 
+nombreuses solutions de gestions de projets existantes est l'intégration direct d'exécution de script dans
+l'application. Prenons l'exemple d'un développeur qui a besoin qu'un serveur de pré-production soit redémarrer : 
+il créera un ticket décrivant son besoin et le devOps, qui aura prédifini cette action avec un script, n'aura qu'a 
+appuyé sur un boutton pour relancer le serveur. Une fois le redémarrage accompli le ticket sera catégorisé 
+comme étant accompli. La demande du développeur est suivi de bout en bout et le devOps gagne du temps 
+grâce à l'automatisation intégrée dans l'application.
+
+\newpage
+\paragraph{}
+Les techonologies utilisées pour ce projet sont : 
+\begin{itemize}
+  \item 
+    Pour la base de données : MongoDB(TODO)
+  \item 
+    Pour le serveur backend : NestJS(TODO) et GraphQL(TODO)
+  \item 
+    Pour l'interface graphique : NextJS (TODO)
+
+\end{itemize}
 \end{sloppypar}
 \end{document}
 
