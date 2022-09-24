@@ -19,7 +19,7 @@
 \subsection {MPP Dashboard}
 \subsubsection {Le contexte} \paragraph {}
 Atos a une plateforme en ligne, My Atos, sur laquelle tous les employés doivent 
-renseigner leurs informations personnelles ainsi que leurs parcours professionel et 
+renseigner leurs informations personnelles ainsi que leurs parcours professionnel et 
 académique. Le problème de cette procédure, qui est en théorie obligatoire, est qu' 
 une partie importante des salariés ne remplissent pas ces informations, et la plupart 
 du temps cela est dû à un simple oubli. Pour y remédier, le service RH et la direction 
@@ -51,7 +51,7 @@ principaux :
 \newpage
 \begin{figure}
   \includegraphics[width=\textwidth] {mpp-diagram.png}
-  \caption {Diagram du fonctionnement de MPP Dashboard}
+  \caption {Diagramme du fonctionnement de MPP Dashboard}
 \end{figure}
 \paragraph {}
 Les technologies utilisés pour la réalisation du projet sont : 
@@ -221,6 +221,124 @@ basiques d'organisations d'équipes que je ne connaissais qu'en théorie.
 % UGAP
 \newpage
 \subsection{UGAP}
+\subsubsection{Le contexte}
+\paragraph{}
+Pour ma 3ème mission j'ai eu la chance de travailler sur un projet client externe. Une occurence 
+rare chez Atos qui préviligie les projets internes pour les stagiares et alternants.
+\begin{quote}
+  "L’UGAP est un établissement public à caractère industriel et commercial français créé en 
+  1985 et placé sous la double tutelle du ministre chargé du Budget et du ministre chargé de 
+  l'Éducation nationale. Elle est une centrale d'achat publique généraliste et constitue, 
+  en raison d'un mode opératoire quasi-exclusif en achat pour revente, un acteur spécifique de 
+  l’achat public, dont le rôle et les modalités d’intervention sont définis par le code de 
+  la commande publique (qui est entré en vigueur en avril 2019) relative aux marchés publics5. 
+  Son activité globale concerne plus de cinq milliards d'euros hors taxes, 
+  répartis en 4,67 milliards d'euros d'activité de grossiste (achat pour revente) et 520 millions d'euros 
+  d'achats réalisés en direct par les entités publiques sur les marchés de gaz et d'électricité passés par 
+  l'UGAP pour leur compte en tant qu'intermédiaire." \linebreak 
+  https://fr.wikipedia.org/wiki/Union\_des\_groupements\_d'achats\_publics 
+\end{quote}
+Pour résumer en une phrase, la raison d'être d'Ugap est la vente de biens aux établissements publics.
+\paragraph{}
+Aujourd'hui la majorité des ventes se font à travers leur site internet. Celui-ci dattant depuis une décennie 
+maintenant requiert d'être remis à niveau, à la fois visuellement et dans la gestion du backend. 
+\newpage
+\begin{figure}
+  \includegraphics[width=\textwidth] {sc_ugap.png}
+  \caption {Site actuel de l'Ugap}
+\end{figure}
+\paragraph{}
+C'est dans ce contexte qu'intervient Atos en tant que préstataire extérieur avec pour mission de 
+rénover le site. J'ai fait parti de l'équipe chargée de la refonte graphique. 
+\paragraph{}
+Je n'avais par le passé jamais participé à un projet d'une tel envergure, l'architecure et les outils 
+techniques employés reflète parfaitement bien la compléxité de l'application. L'interface graphique 
+est composé de plusieurs microfrontend. Pour comprendre ce qu'est un microfrontend on peut faire 
+l'analogie avec les micro-services utilisés communement dans les serveurs backend. La raison d'être 
+des microservices est qu'au lieu d'avoir un gros serveur monolithique on ai plusieurs petites applications 
+regroupés sous un même domaine(TODO). Cela permet de conteneuriser les fonctionnalités. Par exemple 
+un supermarché peut décider d'avoir un microservice pour la gestion des produits, un autre pour la 
+gestion des employés, un autre pour la gestion de l'inventaire etc. Un microfrontend se base sur le même 
+principe à la différence qu'ici on ne conteneurise pas des fonctionnalités backend mais des interfaces 
+graphiques.
+\newpage
+Le site d'Ugap est composé de trois grandes sections : 
+\begin{itemize}
+  \item 
+    Section produit, pour l'achat de biens
+  \item 
+    Section offre, présentant les réductions et soldes du moment
+  \item 
+    Section magazine, contenant des articles sur l'actualité du service publique
+\end{itemize}
+\begin{figure}[h]
+  \includegraphics[width=\textwidth] {archi_ugap.png}
+  \caption {Diagramme de l'architecture frontend du nouveau site d'Ugap}
+\end{figure}
+L'interface de chacune de ces sections est un microfrontend indépendant. Les avantages d'une telle 
+architecture sont : 
+\begin{itemize}
+  \item 
+    Un site plus robuste au bug et autres problèmes : Si l'un des microfrontend vient à ne plus 
+    fonctionner le reste du site n'en sera pas impacté
+  \item 
+    Une maintenance plus simple : Pour les même raisons que le premier point, si l'on veut 
+    mettre à jour l'une des sections on peut le faire sans avoir à désactiver l'ensemble du site 
+  \item 
+    Un développement en équipe facilité : L'indépendance inter microfrontend fait que les développeurs 
+    des différentes sections n'apporteront pas de modifications qui peuvent rentrer en conflit
+\end{itemize}
+L'interface en elle-même est developpée avec NuxtJs et VueJS(TODO les deux). L'ensemble des tâches 
+que j'ai effectué pour le projet Ugap s'est concentré sur la section produit, plus précisement 
+la page produit. Cette page comporte la description du produit sélectionné et offre la possibilité 
+de l'ajouter au panier pour l'acheter.
+\begin{figure}[h]
+  \includegraphics[width=\textwidth] {sc_product-page.png}
+  \caption {Capture d'écran de la page produit du site actuel d'Ugap}
+\end{figure}
+\newpage 
+\subsubsection{La problématique}
+\paragraph{}
+Il est évident que de comprendre une architecture aussi complexe avec une base de code aussi grande 
+est une épreuve en soit, surtout qu'après avoir était sur deux autres projets différents en moins de 3 mois
+une certaine fatigue commençait à apparaitre. Autre problème qui était général à l'ensemble du projet
+et dont je fis état assez rapidement fut le manque de communication entre l'équipe frontend et backend. 
+Or celle-ci est indispensable pour que l'on puisse savoir comment l'API (TODO) d'Ugap fonctionne et
+surtout être au courant des futures changements auquel on doit s'adapter au niveau de l'interface,
+par exemple le format dans lequel l'ont recevait les données. A noter que l'équipe s'occupant du 
+backend était constituée et dirigée en majorité par des employés d'Ugap et non d'Atos, ce qui ne 
+facilite pas la communication.
+\subsubsection{Réalisation de ma mission}
+\paragraph{}
+J'ai commencé par des tâches simples comme l'amélioration ou la modification de composants graphiques
+pré-existants. En parallèle je m'étais autoformé aux technologies utilisés pour la gestion des microfrontend 
+afin d'avoir une compréhension plus profonde du projet surlequel je travail. Je suis ensuite passé à des missions 
+plus complexe comme la création d'un tableau affichant les différentes variantes d'un produit, par exemple
+un ordinateur avec plusieurs processeurs différents. Quant aux problèmes de communication entre équipes frontend 
+et backend j'ai essayé d'être à l'initiative avec mes collègues en créant des cannaux de conversations Teams 
+et en remontant le problème aux différentes réunions afin d'initier la discussion autour du sujet.
+
+\subsubsection{Résultats et bilan}
+\paragraph{}
+Au final j'ai réussi à accomplir la totalité des tâches qui m'ont été assignées. Le débat autour de la communication 
+qu'on a provoqué avait commencé à porter ses fruits vers la fin de mon stage, les échanges devenait plus 
+fréquents, fluide et spontannés. 
+\paragraph{}
+J'ai grandement bénéficié de ce projet, évidement d'un point de vue technique, mais surtout d'un point 
+de vue humain. D'abord j'ai encore plus approfondit mes connaissances en méthode Agile, avec notamment
+la notion de swimlane et de weekly(TODO?), mais j'ai aussi gagné à travailler dans une équipe aussi grande avec 
+tant de métiers différents : développeurs, testeurs, designeurs d'interface, scrum master etc. Ce qui contraste
+avec Tickeratops où l'on était une équipe de 5 développeurs et d'un scrum master. Je dois aussi mentionner
+le sentiment unique à ce projet de travailler sur un produit qui se retrouvera à la disposition de milliers,
+voir de dixaine de milliers d'utilisateurs, contrairment au deux précédentes applications dont l'utilisation
+sera limitée aux employés d'Atos. Ce sentiment de devoir se surpasser, de ne pas avoir le droit à l'erreur 
+et d'être perfectionniste. Aujourd'hui j'attend avec impatience la mise en production du nouveau site 
+prévu pour fin janvier et de voir le projet auquel j'ai contribué disponible au grand public.
+
+\newpage
+\section{Réflexion sur le métier d'ingénieur et la suite de mon projet professionnel}
+\subsection{La contribution des ingénieurs au sein d'Atos}
+\subsection{Réflexion sur la suite de ma carrière}
 \end{sloppypar}
 \end{document}
 
