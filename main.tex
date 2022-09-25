@@ -13,6 +13,7 @@
 \maketitle
 \newpage
 
+\section{Contexte du stage}
 % 2 - missions
 % MPP
 \section {Objectifs et réalisation de mes missions}
@@ -69,7 +70,7 @@ Les technologies utilisés pour la réalisation du projet sont :
 Lorsque je suis arrivé sur le projet, celui-ci a déjà été développé mais avait un 
 problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie (TODO)
 utilisée pour remplir cette tâche, du nom d'Excellente, a été développée en interne par des 
-employés d'Atos et comporte certains inconvenients : 
+employés d'Atos et comporte certains inconvénients : 
 \begin{itemize}
   \item 
     Il comporte plusieurs bugs (TODO). Cela est notamment dû au fait que cette librairie 
@@ -240,8 +241,8 @@ rare chez Atos qui préviligie les projets internes pour les stagiares et altern
 \end{quote}
 Pour résumer en une phrase, la raison d'être d'Ugap est la vente de biens aux établissements publics.
 \paragraph{}
-Aujourd'hui la majorité des ventes se font à travers leur site internet. Celui-ci dattant depuis une décennie 
-maintenant requiert d'être remis à niveau, à la fois visuellement et dans la gestion du backend. 
+Aujourd'hui la majorité des ventes se font à travers leur site internet. Celui-ci dattant de plus d'une décennie 
+requiert d'être remis à niveau, à la fois visuellement et dans la gestion du backend. 
 \newpage
 \begin{figure}
   \includegraphics[width=\textwidth] {sc_ugap.png}
@@ -252,10 +253,10 @@ C'est dans ce contexte qu'intervient Atos en tant que préstataire extérieur av
 rénover le site. J'ai fait parti de l'équipe chargée de la refonte graphique. 
 \paragraph{}
 Je n'avais par le passé jamais participé à un projet d'une tel envergure, l'architecure et les outils 
-techniques employés reflète parfaitement bien la compléxité de l'application. L'interface graphique 
+techniques employés reflètent parfaitement bien la compléxité de l'application. L'interface graphique 
 est composé de plusieurs microfrontend. Pour comprendre ce qu'est un microfrontend on peut faire 
 l'analogie avec les micro-services utilisés communement dans les serveurs backend. La raison d'être 
-des microservices est qu'au lieu d'avoir un gros serveur monolithique on ai plusieurs petites applications 
+des microservices est qu'au lieu d'avoir un gros serveur monolithique(TODO) on ai plusieurs petites applications 
 regroupés sous un même domaine(TODO). Cela permet de conteneuriser les fonctionnalités. Par exemple 
 un supermarché peut décider d'avoir un microservice pour la gestion des produits, un autre pour la 
 gestion des employés, un autre pour la gestion de l'inventaire etc. Un microfrontend se base sur le même 
@@ -312,8 +313,8 @@ facilite pas la communication.
 \paragraph{}
 J'ai commencé par des tâches simples comme l'amélioration ou la modification de composants graphiques
 pré-existants. En parallèle je m'étais autoformé aux technologies utilisés pour la gestion des microfrontend 
-afin d'avoir une compréhension plus profonde du projet surlequel je travail. Je suis ensuite passé à des missions 
-plus complexe comme la création d'un tableau affichant les différentes variantes d'un produit, par exemple
+afin d'avoir une compréhension plus profonde du projet sur lequel je travail. Je suis ensuite passé à des missions 
+plus complexes comme la création d'un tableau affichant les différentes variantes d'un produit, par exemple
 un ordinateur avec plusieurs processeurs différents. Quant aux problèmes de communication entre équipes frontend 
 et backend j'ai essayé d'être à l'initiative avec mes collègues en créant des cannaux de conversations Teams 
 et en remontant le problème aux différentes réunions afin d'initier la discussion autour du sujet.
@@ -321,8 +322,8 @@ et en remontant le problème aux différentes réunions afin d'initier la discus
 \subsubsection{Résultats et bilan}
 \paragraph{}
 Au final j'ai réussi à accomplir la totalité des tâches qui m'ont été assignées. Le débat autour de la communication 
-qu'on a provoqué avait commencé à porter ses fruits vers la fin de mon stage, les échanges devenait plus 
-fréquents, fluide et spontannés. 
+qu'on a provoqué avait commencé à porter ses fruits vers la fin de mon stage, les échanges devenaient plus 
+fréquents, fluides et spontannés. 
 \paragraph{}
 J'ai grandement bénéficié de ce projet, évidement d'un point de vue technique, mais surtout d'un point 
 de vue humain. D'abord j'ai encore plus approfondit mes connaissances en méthode Agile, avec notamment
@@ -330,7 +331,7 @@ la notion de swimlane et de weekly(TODO?), mais j'ai aussi gagné à travailler 
 tant de métiers différents : développeurs, testeurs, designeurs d'interface, scrum master etc. Ce qui contraste
 avec Tickeratops où l'on était une équipe de 5 développeurs et d'un scrum master. Je dois aussi mentionner
 le sentiment unique à ce projet de travailler sur un produit qui se retrouvera à la disposition de milliers,
-voir de dixaine de milliers d'utilisateurs, contrairment au deux précédentes applications dont l'utilisation
+voir de dixaine de milliers d'utilisateurs, contrairement aux deux précédentes applications dont l'utilisation
 sera limitée aux employés d'Atos. Ce sentiment de devoir se surpasser, de ne pas avoir le droit à l'erreur 
 et d'être perfectionniste. Aujourd'hui j'attend avec impatience la mise en production du nouveau site 
 prévu pour fin janvier et de voir le projet auquel j'ai contribué disponible au grand public.
@@ -338,7 +339,44 @@ prévu pour fin janvier et de voir le projet auquel j'ai contribué disponible a
 \newpage
 \section{Réflexion sur le métier d'ingénieur et la suite de mon projet professionnel}
 \subsection{La contribution des ingénieurs au sein d'Atos}
+\paragraph{}
+Les ingénieurs sont au cœur de l'entreprise, c'est eux qui produisent la majorité de la valeur 
+ajoutée que propose Atos. Ils sont perçus comme étant la "main d'œvre" de l'établissement.
+\paragraph{}
+Atos étant une grande multinationale la communication inter-entité est très procédurale et 
+administrative. Cela à plusieurs inconvénients : 
+\begin{itemize}
+  \item 
+    La lenteur des procédures qui peut causer des retards dans la progression des projets. Par exemple lors de mon travail 
+    sur MPP Dashboard je devais résoudre une anomalie dans le système d'authentification. L'application utilise 
+    le SSO(TODO) d'Atos et je devais donc m'assurer que l'instance du SSO pour l'application sur laquelle je travail 
+    est toujours valide. Pour cela je devais communiquer avec l'entité responsable du SSO qui est localisé en Pologne 
+    en remplissant un formulaire et en ouvrant un ticket sur une plateforme dédiée. Il m'a fallu attendre presque 
+    deux semaines pour que le problème soit résolue, problème qui s'est avéré être une simple erreur de configuration
+  \item 
+    Le manque de contact humain entre les entités. Pour illustrer mes propos, des employés qui travaillait depuis
+    des années dans l'entreprise ne connaissaient peu voir aucune personne de l'open space (TODO) d'en face. Les 
+    seuls fois où j'ai eu la chance durant mes 4 mois de stages de renconter des personnes d'autres entités étaient
+    tout simplement durant mes pauses au baby foot de la caféteria de l'entreprise, et non durant mes heures de travail
+\end{itemize}
+\newpage
 \subsection{Réflexion sur la suite de ma carrière}
+\paragraph{}
+Durant ce stage je me suis exclusivement concentré sur du développement web à la fois frontend
+et backend. J'ai appronfondit mes compétences techniques avec de multiples librairies tel que NextJs,
+NestJS etc.. et de nouvelles manières de concevoir des applications, avec le système de microfrontend
+par exemple. Mais à mon sens l'acquis le plus précieux reste celui d'avoir travailler dans des équipes
+dont la gestion se basée sur les méthodes Agiles. Quelques soit le domaine ou l'entreprise dans lequel je travaillerais 
+à l'avneir ces connaissances resteront d'une constante utilité.
+
+\paragraph{}
+Si je devais refléter mon appréciation personelle sur le travail que j'ai accompli, il est évident que j'ai préfèré
+le travail sur les serveurs et les bases de données. La conception et mise en place d'interface n'est clairement pas ce 
+que je souhaite faire à l'avenir. Cette préférence ne fait que conforter mon plan pour la suite de ma carrière 
+de devenir data scientist. Avec maintenant un stage de L2 en data, et un stage L3 et M1 en web, mon objectif 
+est d'obtenir un PFE dans mon métier de prédilection. Mes compétences en développement web étant un bonus
+non-négligeable qui pourra très certainement m'ouvrir des opportunités à l'avenir.
+\section{Conclusion}
 \end{sloppypar}
 \end{document}
 
