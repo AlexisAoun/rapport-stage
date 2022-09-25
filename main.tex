@@ -107,7 +107,7 @@ en français.
 \subsubsection{L'entité Cloud Apps and Data}
 \paragraph{}
 Mon stage s'est déroulé dans l'entité Cloud Apps and Data, ou CAD, gouvernée par 
-l'unité commerciale France. Celle-ci est constitué d'une soixantaine de développeurs et de devOps(TODO) qui produisent 
+l'unité commerciale France. Celle-ci est constitué d'une soixantaine de développeurs et de devOps$^{1}$ qui produisent 
 des solutions digitales dans le cadre de projets internes et projets clients externes.
 Voici une courte liste non-exhaustive des clients prises en charge par le CAD : Auchan, Pierre-Fabre, Sncf, UGAP, Kiabi,
  la Ratp et bien d'autres.
@@ -137,7 +137,7 @@ les employés automatiquement à partir d'un fichier excel contenant les informa
 de tous les collaborateurs, fournit par le service RH. Ce projet fut baptisé MPP Dashboard.
 
 \paragraph {} 
-Le projet est une application web(TODO) dont le fonctionnement repose sur trois processus
+Le projet est une application web dont le fonctionnement repose sur trois processus
 principaux : 
 \begin {enumerate}
   \item 
@@ -166,22 +166,22 @@ principaux :
 Les technologies utilisés pour la réalisation du projet sont : 
 \begin {itemize}
 \item   
-  Pour la base de données : PostgreSQL (TODO)
+  Pour la base de données : PostgreSQL$^{2}$ 
 \item 
-  Pour le serveur backend (TODO) : ExpressJS (TODO)
+  Pour le serveur backend$^{3}$ : ExpressJS$^{4}$
 \item 
-  Pour l'interface grahique : ReactJS (TODO)
+  Pour l'interface grahique : ReactJS$^{4}$
 \end {itemize}
 
 \subsubsection{La problèmatique}
 \paragraph {}
 Lorsque je suis arrivé sur le projet, celui-ci a déjà été développé mais avait un 
-problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie (TODO)
+problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie$^{5}$
 utilisée pour remplir cette tâche, du nom d'Excellente, a été développée en interne par des 
 employés d'Atos et comporte certains inconvénients : 
 \begin{itemize}
   \item 
-    Il comporte plusieurs bugs (TODO). Cela est notamment dû au fait que cette librairie 
+    Il comporte plusieurs bugs$^{6}$. Cela est notamment dû au fait que cette librairie 
     n'est pas connue du grand publique et ne reçoit donc pas un grand nombre de tests et 
     de contributions 
   \item 
@@ -203,18 +203,18 @@ Afin d'accomplir ma mission j'ai étudié plusieurs possibilités :
     techique, corriger la librairie pourrait prendre des mois alors que la direction d'Atos 
     attendait des résultats dans les semaines suivant mon arrivé.
   \item 
-    Utiliser un script Python (TODO). Lors de mes différents cours en data au sein de l'IMT Nord 
+    Utiliser un script Python$^{7}$. Lors de mes différents cours en data au sein de l'IMT Nord 
     Europe, l'une des compétences que j'ai acquis est le traitement de données par le biais 
-    de script Python en utilisant des librairies tels que Panda (TODO). Les performances 
+    de script Python en utilisant des librairies tels que Panda$^{8}$. Les performances 
     seraient des ordres de grandeurs meilleurs que celle de n'importe quelle autre solution 
-    implémentée en Javascript (TODO), et l'écriture du script peut se faire en une journée. 
+    implémentée en Javascript$^{9}$, et l'écriture du script peut se faire en une journée. 
     La difficulté est l'implémentation du pont entre le serveur ExpressJS et le script Python. 
     Celui-ci doit être exécuter au bon moment par le serveur, et ce dernier doit pouvoir 
-    récupérer le résultat final. Il y avait aussi la problématique des dépendances(TODO) spécifique
+    récupérer le résultat final. Il y avait aussi la problématique des dépendances$^{10}$ spécifique
     à Python dont a besoin un tel script qui rajouterait une couche de compléxité au projet ExpressJS, au 
     développement mais surtout à la maintenance.
   \item 
-    Utiliser une autre librairie Javascript, ExcelJS(TODO). ExcelJS est sans aucun doute 
+    Utiliser une autre librairie Javascript, ExcelJS. ExcelJS est sans aucun doute 
     la librairie Javascript la plus utilisée pour le traitement d'excel. Un avantage très important 
     d'une librairie aussi connue est sa documentation riche qui m'a permis de faire des premiers 
     tests rapidements. De ces expérimentations j'en avais conclu que la fiabilité était 
@@ -250,11 +250,11 @@ mais surtout mes capacités à prendre des initiatives et à les mettre en œuvr
 \paragraph{}
 Comme mentionné dans la partie décrivant le contexte de réalisation de mon stage, j'ai évolué 
 dans l'entité Cloud Apps \& Data, ou CAD. Celle-ci est composée principalement de deux corps 
-de métier, les développeurs et les devOps(TODO) qui travaillent ensemble afin de concevoir 
+de métier, les développeurs et les devOps qui travaillent ensemble afin de concevoir 
 et déployer les solutions efficacement.
 \paragraph{}
 Cependant un problème récurrent apparait au sein de l'entité : la communication entre ces deux 
-groupes. En théorie un canal de communication sur la plateforme Teams (TODO) est dédié à l'échange 
+groupes. En théorie un canal de communication sur la plateforme Teams est dédié à l'échange 
 entre développeur et devOps, mais le manque de formalisme et la forte pression que peuvent 
 subir les devOps engendre un temps d'attente prolongé pour le traitement des demandes des développeurs
 qui en conséquence décident souvent de court-circuiter Teams et de communiquer directement
@@ -281,11 +281,11 @@ grâce à l'automatisation intégrée dans l'application.
 Les techonologies utilisées pour ce projet sont : 
 \begin{itemize}
   \item 
-    Pour la base de données : MongoDB(TODO)
+    Pour la base de données : MongoDB$^{11}$
   \item 
-    Pour le serveur backend : NestJS(TODO) et GraphQL(TODO)
+    Pour le serveur backend : NestJS$^{12}$ et GraphQL$^{13}$
   \item 
-    Pour l'interface graphique : NextJS (TODO)
+    Pour l'interface graphique : NextJS$^{14}$ 
 \end{itemize}
 
 \paragraph{}
@@ -296,7 +296,7 @@ d'expliquer plus en détail sa demande. Dans cette description on souhaite égal
 des images afin d'illustrer nos propos, qui pourrait être par exemple une capture d'écran. La consigne 
 qui m'a été donnée était de pouvoir stocker ces photos nos pas sur le même serveur où foncitonne 
 le backend de l'application mais sur un serveur tiers détenu par l'un des partenaire d'Atos, Google, 
-avec leur service de Bucket GCP (TODO, ou explique ici)
+avec leur service de Bucket GCP$^{15}$
 
 \subsubsection{La problématique}
 \paragraph{}
@@ -322,7 +322,7 @@ application web.
 \paragraph{}
 A travers cette mission j'ai pu faire preuve d'adaptation en m'autoformant aux technologies 
 requises. Mais là n'est pas la leçon la plus importante. Contrairement au projet MPP où j'étais 
-seul, j'ai travaillé au sein d'une équipe qui suivait les principes des méthodes agiles ou SCRUM(TODO),
+seul, j'ai travaillé au sein d'une équipe qui suivait les principes des méthodes agiles ou SCRUM,
 une première pour moi. J'ai donc appris les fondamentaux avec les sprints et les users story. 
 J'ai également pu participé aux sprint review, sprint planning, retro, daily etc. Des connaissances 
 basiques d'organisations d'équipes que je ne connaissais qu'en théorie.
@@ -364,8 +364,8 @@ Je n'avais par le passé jamais participé à un projet d'une tel envergure, l'a
 techniques employés reflètent parfaitement bien la compléxité de l'application. L'interface graphique 
 est composé de plusieurs microfrontend. Pour comprendre ce qu'est un microfrontend on peut faire 
 l'analogie avec les micro-services utilisés communement dans les serveurs backend. La raison d'être 
-des microservices est qu'au lieu d'avoir un gros serveur monolithique(TODO) on ai plusieurs petites applications 
-regroupés sous un même domaine(TODO). Cela permet de conteneuriser les fonctionnalités. Par exemple 
+des microservices est qu'au lieu d'avoir un gros serveur monolithique on ai plusieurs petites applications 
+regroupés sous un même domaine$^{16}$. Cela permet de conteneuriser les fonctionnalités. Par exemple 
 un supermarché peut décider d'avoir un microservice pour la gestion des produits, un autre pour la 
 gestion des employés, un autre pour la gestion de l'inventaire etc. Un microfrontend se base sur le même 
 principe à la différence qu'ici on ne conteneurise pas des fonctionnalités backend mais des interfaces 
@@ -397,7 +397,7 @@ architecture sont :
     Un développement en équipe facilité : L'indépendance inter microfrontend fait que les développeurs 
     des différentes sections n'apporteront pas de modifications qui peuvent rentrer en conflit
 \end{itemize}
-L'interface en elle-même est developpée avec NuxtJs et VueJS(TODO les deux). L'ensemble des tâches 
+L'interface en elle-même est developpée avec NuxtJs$^{17}$ et VueJS$^{18}$. L'ensemble des tâches 
 que j'ai effectué pour le projet Ugap s'est concentré sur la section produit, plus précisement 
 la page produit. Cette page comporte la description du produit sélectionné et offre la possibilité 
 de l'ajouter au panier pour l'acheter.
@@ -412,7 +412,7 @@ Il est évident que de comprendre une architecture aussi complexe avec une base 
 est une épreuve en soit, surtout qu'après avoir était sur deux autres projets différents en moins de 3 mois
 une certaine fatigue commençait à apparaitre. Autre problème qui était général à l'ensemble du projet
 et dont je fis état assez rapidement fut le manque de communication entre l'équipe frontend et backend. 
-Or celle-ci est indispensable pour que l'on puisse savoir comment l'API (TODO) d'Ugap fonctionne et
+Or celle-ci est indispensable pour que l'on puisse savoir comment l'API$^{19}$ d'Ugap fonctionne et
 surtout être au courant des futures changements auquel on doit s'adapter au niveau de l'interface,
 par exemple le format dans lequel l'ont recevait les données. A noter que l'équipe s'occupant du 
 backend était constituée et dirigée en majorité par des employés d'Ugap et non d'Atos, ce qui ne 
@@ -435,7 +435,7 @@ fréquents, fluides et spontannés.
 \paragraph{}
 J'ai grandement bénéficié de ce projet, évidement d'un point de vue technique, mais surtout d'un point 
 de vue humain. D'abord j'ai encore plus approfondit mes connaissances en méthode Agile, avec notamment
-la notion de swimlane et de weekly(TODO?), mais j'ai aussi gagné à travailler dans une équipe aussi grande avec 
+la notion de swimlane et de weekly, mais j'ai aussi gagné à travailler dans une équipe aussi grande avec 
 tant de métiers différents : développeurs, testeurs, designeurs d'interface, scrum master etc. Ce qui contraste
 avec Tickeratops où l'on était une équipe de 5 développeurs et d'un scrum master. Je dois aussi mentionner
 le sentiment unique à ce projet de travailler sur un produit qui se retrouvera à la disposition de milliers,
@@ -457,13 +457,13 @@ administrative. Cela à plusieurs inconvénients :
   \item 
     La lenteur des procédures qui peut causer des retards dans la progression des projets. Par exemple lors de mon travail 
     sur MPP Dashboard je devais résoudre une anomalie dans le système d'authentification. L'application utilise 
-    le SSO(TODO) d'Atos et je devais donc m'assurer que l'instance du SSO pour l'application sur laquelle je travail 
+    le SSO$^{19}$ d'Atos et je devais donc m'assurer que l'instance du SSO pour l'application sur laquelle je travail 
     est toujours valide. Pour cela je devais communiquer avec l'entité responsable du SSO qui est localisé en Pologne 
     en remplissant un formulaire et en ouvrant un ticket sur une plateforme dédiée. Il m'a fallu attendre presque 
     deux semaines pour que le problème soit résolue, problème qui s'est avéré être une simple erreur de configuration
   \item 
     Le manque de contact humain entre les entités. Pour illustrer mes propos, des employés qui travaillait depuis
-    des années dans l'entreprise ne connaissaient peu voir aucune personne de l'open space (TODO) d'en face. Les 
+    des années dans l'entreprise ne connaissaient peu voir aucune personne de l'open space d'en face. Les 
     seuls fois où j'ai eu la chance durant mes 4 mois de stages de renconter des personnes d'autres entités étaient
     tout simplement durant mes pauses au baby foot de la caféteria de l'entreprise, et non durant mes heures de travail
 \end{itemize}
@@ -496,8 +496,73 @@ est la pièce qui manquait à ma préparation personnelle pour me lancer dans la
 
 \newpage
 \section{Glossaire}
+\begin{enumerate}
+  \item 
+    DevOps : Le devops — ou DevOps (selon la graphie habituellement utilisée en langue anglaise) —
+    est un mouvement en ingénierie informatique et une pratique technique visant à l'unification du développement logiciel (dev) et de l'administration des infrastructures informatiques (ops), notamment l'administration système. 
+    - https://fr.wikipedia.org/wiki/Devops
+  \item 
+    PostgreSQL : PostgreSQL est un système de gestion de base de données relationnelle et objet (SGBDRO). C'est un outil libre disponible selon les termes d'une licence de type BSD. 
+    - https://fr.wikipedia.org/wiki/PostgreSQL
+  \item 
+    Backend : Lorsqu'un client envoie une requête à un serveur pour récuperer ou envoyer des données se serveur est considéré un serveur backend
+  \item 
+    ExpressJS : Express.js est un framework pour construire des applications web basées sur Node.js4. C'est de fait le framework standard pour le développement de serveur en Node.js5. L'auteur original, TJ Holowaychuck, le décrit comme un serveur inspiré de Sinatra6 dans le sens qu'il est relativement minimaliste tout en permettant d'étendre ses fonctionnalités via des plugins. 
+    - https://fr.wikipedia.org/wiki/Express.js
+  \item 
+    Librairie : En informatique, une bibliothèque logicielle est une collection de routines, qui peuvent être déjà compilées et prêtes à être utilisées par des programmes1,2.
+    Les bibliothèques sont enregistrées dans des fichiers semblables, voire identiques aux fichiers de programmes3, sous la forme d'une collection de fichiers de code objet rassemblés2 accompagnée d'un index permettant de retrouver facilement chaque routine3. Le mot " librairie " est souvent utilisé à tort pour désigner une bibliothèque logicielle. Il s'agit d'un anglicisme fautif dû à un faux-ami (library). 
+    - https://fr.wikipedia.org/wiki/Biblioth\%C3\%A8que\_logicielle
+  \item 
+    Un bug : En informatique un bug est un dysfonctionnement ou anomalie présent dans un programme. 
+  \item 
+    Python : Un langage de programmation souvent utilisé dans le domaine de la data. 
+  \item 
+    Panda : Librairie Python facilitant la manipulation et la conversion de données en plusieurs formats. 
+  \item 
+    Javascript : Langage informatique utilisé en développement web. 
+  \item 
+    Dépendance : Une dépendance logicielle est le fait d'avoir besoin d'un logiciel donné pour en utiliser un autre ou le fait que la valeur de X influe sur le comportement de Y. 
+    - https://fr.wikipedia.org/wiki/D\%C3\%A9pendance
+  \item 
+    MongoDB : MongoDB (de l'anglais humongous qui peut être traduit par " énorme ") est un système de gestion de base de données orienté documents, répartissable sur un nombre quelconque d'ordinateurs et ne nécessitant pas de schéma prédéfini des données. Il est écrit en C++. Le serveur et les outils sont distribués sous licence SSPL, les pilotes sous licence Apache et la documentation sous licence Creative Commons2. Il fait partie de la mouvance NoSQL. 
+    - https://fr.wikipedia.org/wiki/MongoDB
+  \item 
+    NestJS : NestJS est un framework permettant la création de serveur web.
+  \item 
+    GraphQL : GraphQL1 (pour Graph Query Language) est un langage de requêtes et un environnement d'exécution, créé par Facebook en 2012, avant d'être publié comme projet open-source en 20152. Inscrit dans le modèle Client-Serveur, il propose une alternative aux API REST
+    - https://fr.wikipedia.org/wiki/GraphQL
+  \item 
+    NextJS : Next.js2 est un framework gratuit et open source s'appuyant sur la bibliothèque JavaScript React3 et sur la technologie Node.js. 
+    - https://fr.wikipedia.org/wiki/Next.js
+  \item 
+    Google Cloud Platform (GCP) est une plateforme de cloud computing fournie par Google, proposant un hébergement sur la même infrastructure que celle que Google utilise en interne pour des produits tels que son moteur de recherche1. Cloud Platform fournit aux développeurs des produits permettant de construire une gamme de programmes allant de simples sites web à des applications complexes
+    - https://fr.wikipedia.org/wiki/Google\_Cloud\_Platform
+  \item 
+    Domaine : Un nom de domaine (NDD en notation abrégée française ou DN pour Domain Name en anglais) est, dans le système de noms de domaine DNS, un identifiant de domaine internet. Un domaine est un ensemble d'ordinateurs reliés à Internet et possédant une caractéristique commune. 
+    - https://fr.wikipedia.org/wiki/Nom\_de\_domaine
+  \item 
+    NuxtJS : Nuxt.js est un framework gratuit et open source basé notamment sur Vue.js et Node.js. Le framework est présenté comme un " meta-framework pour créer des applications universelles ". Le terme " universel " signifie que le code de l'application est initialement exécuté par le serveur et ensuite dans le navigateur client4,5. L'application construite peut ainsi être utilisée dans un navigateur comme une application web monopage mais elle peut aussi être utilisée comme un ensemble de pages générées par le serveur6. Le framework permet aussi la génération de pages web statiques qui peuvent être servies par n'importe quel serveur web. 
+    - https://fr.wikipedia.org/wiki/Nuxt.js
+  \item 
+    VueJS : Vue.js (aussi appelé plus simplement Vue), est un framework JavaScript open-source utilisé pour construire des interfaces utilisateur et des applications web monopages.
+    - https://fr.wikipedia.org/wiki/Vue.js
+  \item 
+    API : En informatique, une interface de programmation d’application1 ou interface de programmation applicative2,3,4 (souvent désignée par le terme API pour Application Programming Interface) est un ensemble normalisé de classes, de méthodes, de fonctions et de constantes qui sert de façade par laquelle un logiciel offre des services à d'autres logiciels. Elle est offerte par une bibliothèque logicielle ou un service web, le plus souvent accompagnée d'une description qui spécifie comment des programmes consommateurs peuvent se servir des fonctionnalités du programme fournisseur. 
+    - https://fr.wikipedia.org/wiki/Interface\_de\_programmation 
+  
+
+\end{enumerate}
 \newpage
 \section{Bibliographie}
+\begin{itemize}
+  \item 
+    https://atos.fr
+  \item 
+    https://ugap.fr 
+  \item 
+    Atos Universal Registration Document 2019 - https://atos.net/content/investors-documents/2019/atos-2019-universal-registration-document-Including-2019-annual-financial-report.pdf
+\end{itemize}
 \end{sloppypar}
 \end{document}
 
