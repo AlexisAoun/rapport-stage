@@ -13,6 +13,34 @@
 \maketitle
 \newpage
 
+\def\contentsname{Sommaires}
+\tableofcontents
+\newpage
+
+\renewcommand{\listfigurename}{Table des matières des illustrations}
+\listoffigures
+\newpage
+
+\section*{Résumé et mots clés}
+\addcontentsline{toc}{section}{Résumé et mots clés}
+\newpage
+
+\section*{Abstract and keywords}
+\addcontentsline{toc}{section}{Abstract and keywords}
+\newpage
+
+% gantt 
+\section*{Planning global de mon stage}
+\addcontentsline{toc}{section}{Planning global de mon stage}
+\begin{figure}[h]
+  \includegraphics[width=\textwidth] {gantt.png}
+  \caption {Diagramme de Gantt de mon stage}
+\end{figure}
+\newpage
+% introduction 
+\section{Introduction}
+\paragraph{}
+
 % 1 - Presentation
 \section{Contexte de réalisation du stage}
 \subsection{Présentation d'Atos}
@@ -45,7 +73,7 @@ en français.
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth] {orga_atos.png}
-  \caption {Organisation d'Atos tiré du URD 2019 (voir bibliographie)}
+  \caption {Organisation d'Atos - 2019 }
 \end{figure}
 
 \subsubsection{L'entité Cloud Apps and Data}
@@ -91,13 +119,13 @@ principaux :
     programmatiquement.
   \item 
     Le filtrage : Une fois les donnés des collaborateurs dans notre application, on
-    sauvegarde dans une base de donnée uniquement ceux dont le taux de renseignement 
+    sauvegarde dans une base de données uniquement ceux dont le taux de renseignement 
     d'informations et en-dessous d'un seuil défini par les administrateurs de 
     l'application. Le taux par défaut est de 90\%. 
   \item 
     L'envoie de mail : L'application enverra des mails à tous les salariés présent 
     dans la base de données après la phase de filtrage. Un chiffre correspondant au nombre
-    de mails envoyés au collaborateurs est associé à chacun d'entre eux. Au bout du 
+    de mails envoyés aux collaborateurs est associé à chacun d'entre eux. Au bout du 
     5ème mail l'employé n'ayant pas renseigner les informations nécéssaires est signalé 
     automatiquement au service RH.
 \end{enumerate}
@@ -429,6 +457,10 @@ de devenir data scientist. Avec maintenant un stage de L2 en data, et un stage L
 est d'obtenir un PFE dans mon métier de prédilection. Mes compétences en développement web étant un bonus
 non-négligeable qui pourra très certainement m'ouvrir des opportunités à l'avenir.
 \section{Conclusion}
+\newpage
+\section{Glossaire}
+\newpage
+\section{Bibliographie}
 \end{sloppypar}
 \end{document}
 
