@@ -71,7 +71,7 @@ devant rappeler automatiquement par mail les employés d'accomplir des demandes 
 Tickeratops qui est un outil de gestion de tickets et d'automatisation de tâches de devOps, et enfin 
 le projet client UGAP où je suis intervenu dans la rénovation de l'interface graphique d'un site web. 
 J'ai acquis un large panel de compétences techniques dans le domaine des applications web à la fois 
-pour le développement d'interface graphique mais aussi dans la programmation de serveur web gérant les données.
+pour le développement d'interface graphique et dans la programmation de serveur web gérant les données.
 Je me suis aussi et surtout familiarisé avec les méthodes Agiles pour la gestion des projets et des équipes.
 \paragraph{}
 Mots clés : Digitalisation, application web, frontend, backend, Javascript
@@ -191,7 +191,7 @@ principaux :
     d'informations et en-dessous d'un seuil défini par les administrateurs de 
     l'application. Le taux par défaut est de 90\%. 
   \item 
-    L'envoie de mail : L'application enverra des mails à tous les salariés présent 
+    L'envoie de mail : L'application enverra des mails à tous les salariés présents 
     dans la base de données après la phase de filtrage. Un chiffre correspondant au nombre
     de mails envoyés aux collaborateurs est associé à chacun d'entre eux. Au bout du 
     5ème mail l'employé n'ayant pas renseigner les informations nécessaires est signalé 
@@ -210,18 +210,18 @@ Les technologies utilisés pour la réalisation du projet sont :
 \item 
   Pour le serveur backend$^{3}$ : ExpressJS$^{4}$
 \item 
-  Pour l'interface graphique : ReactJS$^{4}$
+  Pour l'interface graphique : ReactJS$^{5}$
 \end {itemize}
 
 \subsubsection{La problématique}
 \paragraph {}
 Lorsque je suis arrivé sur le projet, celui-ci a déjà été développé mais avait un 
-problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie$^{5}$
+problème avec l'un des processus, celui d'extraction de l'excel. En effet la librairie$^{6}$
 utilisée pour remplir cette tâche, du nom d'Excellente, a été développée en interne par des 
 employés d'Atos et comporte certains inconvénients : 
 \begin{itemize}
   \item 
-    Il comporte plusieurs bugs$^{6}$. Cela est notamment dû au fait que cette librairie 
+    Il comporte plusieurs bugs$^{7}$. Cela est notamment dû au fait que cette librairie 
     n'est pas connue du grand publique et ne reçoit donc pas un grand nombre de tests et 
     de contributions 
   \item 
@@ -243,14 +243,14 @@ Afin d'accomplir ma mission j'ai étudié plusieurs possibilités :
     technique, corriger la librairie pourrait prendre des mois alors que la direction d'Atos 
     attendait des résultats dans les semaines suivant mon arrivée.
   \item 
-    Utiliser un script Python$^{7}$. Lors de mes différents cours en data au sein de l'IMT Nord 
+    Utiliser un script Python$^{8}$. Lors de mes différents cours en data au sein de l'IMT Nord 
     Europe, l'une des compétences que j'ai acquis est le traitement de données par le biais 
-    de script Python en utilisant des librairies tels que Panda$^{8}$. Les performances 
+    de script Python en utilisant des librairies tels que Panda$^{9}$. Les performances 
     seraient des ordres de grandeurs meilleurs que celle de n'importe quelle autre solution 
-    implémentée en Javascript$^{9}$, et l'écriture du script peut se faire en une journée. 
+    implémentée en Javascript$^{10}$, et l'écriture du script peut se faire en une journée. 
     La difficulté est l'implémentation du pont entre le serveur ExpressJS et le script Python. 
     Celui-ci doit être exécuter au bon moment par le serveur, et ce dernier doit pouvoir 
-    récupérer le résultat final. Il y avait aussi la problématique des dépendances$^{10}$ spécifique
+    récupérer le résultat final. Il y avait aussi la problématique des dépendances$^{11}$ spécifique
     à Python dont a besoin un tel script qui rajouterait une couche de complexité au projet ExpressJS, au 
     développement mais surtout à la maintenance.
   \item 
@@ -321,11 +321,11 @@ grâce à l'automatisation intégrée dans l'application.
 Les technologies utilisées pour ce projet sont : 
 \begin{itemize}
   \item 
-    Pour la base de données : MongoDB$^{11}$
+    Pour la base de données : MongoDB$^{12}$
   \item 
-    Pour le serveur backend : NestJS$^{12}$ et GraphQL$^{13}$
+    Pour le serveur backend : NestJS$^{13}$ et GraphQL$^{14}$
   \item 
-    Pour l'interface graphique : NextJS$^{14}$ 
+    Pour l'interface graphique : NextJS$^{15}$ 
 \end{itemize}
 
 \paragraph{}
@@ -336,7 +336,7 @@ d'expliquer plus en détail sa demande. Dans cette description on souhaite égal
 des images afin d'illustrer nos propos, qui pourrait être par exemple une capture d'écran. La consigne 
 qui m'a été donnée était de pouvoir stocker ces photos nos pas sur le même serveur où fonctionne 
 le backend de l'application mais sur un serveur tiers détenu par l'un des partenaire d'Atos, Google, 
-avec leur service de Bucket GCP$^{15}$
+avec leur service de Bucket GCP$^{16}$
 
 \subsubsection{La problématique}
 \paragraph{}
@@ -405,7 +405,7 @@ techniques employés reflètent parfaitement bien la complexité de l'applicatio
 est composé de plusieurs microfrontend. Pour comprendre ce qu'est un microfrontend on peut faire 
 l'analogie avec les micro-services utilisés communément dans les serveurs backend. La raison d'être 
 des microservices est qu'au lieu d'avoir un gros serveur monolithique on ai plusieurs petites applications 
-regroupés sous un même domaine$^{16}$. Cela permet de conteneuriser les fonctionnalités. Par exemple 
+regroupés sous un même domaine$^{17}$. Cela permet de conteneuriser les fonctionnalités. Par exemple 
 un supermarché peut décider d'avoir un microservice pour la gestion des produits, un autre pour la 
 gestion des employés, un autre pour la gestion de l'inventaire etc. Un microfrontend se base sur le même 
 principe à la différence qu'ici on ne conteneurise pas des fonctionnalités backend mais des interfaces 
@@ -437,7 +437,7 @@ architecture sont :
     Un développement en équipe facilité : L'indépendance inter microfrontend fait que les développeurs 
     des différentes sections n'apporteront pas de modifications qui peuvent rentrer en conflit
 \end{itemize}
-L'interface en elle-même est développée avec NuxtJs$^{17}$ et VueJS$^{18}$. L'ensemble des tâches 
+L'interface en elle-même est développée avec NuxtJs$^{18}$ et VueJS$^{19}$. L'ensemble des tâches 
 que j'ai effectué pour le projet Ugap s'est concentré sur la section produit, plus précisement 
 la page produit. Cette page comporte la description du produit sélectionné et offre la possibilité 
 de l'ajouter au panier pour l'acheter.
@@ -452,7 +452,7 @@ Il est évident que de comprendre une architecture aussi complexe avec une base 
 est une épreuve en soit, surtout qu'après avoir était sur deux autres projets différents en moins de 3 mois
 une certaine fatigue commençait à apparaître. Autre problème qui était général à l'ensemble du projet
 et dont je fis état assez rapidement fut le manque de communication entre l'équipe frontend et backend. 
-Or celle-ci est indispensable pour que l'on puisse savoir comment l'API$^{19}$ d'Ugap fonctionne et
+Or celle-ci est indispensable pour que l'on puisse savoir comment l'API$^{20}$ d'Ugap fonctionne et
 surtout être au courant des futures changements auquel on doit s'adapter au niveau de l'interface,
 par exemple le format dans lequel l'ont recevait les données. A noter que l'équipe s'occupant du 
 backend était constituée et dirigée en majorité par des employés d'Ugap et non d'Atos, ce qui ne 
@@ -497,7 +497,7 @@ administrative. Cela à plusieurs inconvénients :
   \item 
     La lenteur des procédures qui peut causer des retards dans la progression des projets. Par exemple lors de mon travail 
     sur MPP Dashboard je devais résoudre une anomalie dans le système d'authentification. L'application utilise 
-    le SSO$^{19}$ d'Atos et je devais donc m'assurer que l'instance du SSO pour l'application sur laquelle je travail 
+    le SSO$^{21}$ d'Atos et je devais donc m'assurer que l'instance du SSO pour l'application sur laquelle je travail 
     est toujours valide. Pour cela je devais communiquer avec l'entité responsable du SSO qui est localisé en Pologne 
     en remplissant un formulaire et en ouvrant un ticket sur une plateforme dédiée. Il m'a fallu attendre presque 
     deux semaines pour que le problème soit résolue, problème qui s'est avéré être une simple erreur de configuration
@@ -550,6 +550,9 @@ est la pièce qui manquait à ma préparation personnelle pour me lancer dans la
     ExpressJS : Express.js est un framework pour construire des applications web basées sur Node.js4. C'est de fait le framework standard pour le développement de serveur en Node.js5. L'auteur original, TJ Holowaychuck, le décrit comme un serveur inspiré de Sinatra6 dans le sens qu'il est relativement minimaliste tout en permettant d'étendre ses fonctionnalités via des plugins. 
     - https://fr.wikipedia.org/wiki/Express.js
   \item 
+    ReactJS : React (aussi appelé React.js ou ReactJS) est une bibliothèque JavaScript libre développée par Facebook depuis 2013. Le but principal de cette bibliothèque est de faciliter la création d'application web monopage, via la création de composants dépendant d'un état et générant une page (ou portion) HTML à chaque changement d'état. 
+    - https://fr.wikipedia.org/wiki/React
+  \item 
     Librairie : En informatique, une bibliothèque logicielle est une collection de routines, qui peuvent être déjà compilées et prêtes à être utilisées par des programmes1,2.
     Les bibliothèques sont enregistrées dans des fichiers semblables, voire identiques aux fichiers de programmes3, sous la forme d'une collection de fichiers de code objet rassemblés2 accompagnée d'un index permettant de retrouver facilement chaque routine3. Le mot " librairie " est souvent utilisé à tort pour désigner une bibliothèque logicielle. Il s'agit d'un anglicisme fautif dû à un faux-ami (library). 
     - https://fr.wikipedia.org/wiki/Biblioth\%C3\%A8que\_logicielle
@@ -590,6 +593,9 @@ est la pièce qui manquait à ma préparation personnelle pour me lancer dans la
   \item 
     API : En informatique, une interface de programmation d’application1 ou interface de programmation applicative2,3,4 (souvent désignée par le terme API pour Application Programming Interface) est un ensemble normalisé de classes, de méthodes, de fonctions et de constantes qui sert de façade par laquelle un logiciel offre des services à d'autres logiciels. Elle est offerte par une bibliothèque logicielle ou un service web, le plus souvent accompagnée d'une description qui spécifie comment des programmes consommateurs peuvent se servir des fonctionnalités du programme fournisseur. 
     - https://fr.wikipedia.org/wiki/Interface\_de\_programmation 
+  \item 
+    SSO : L'authentification unique, souvent désignée par le sigle anglais SSO (de single sign-on) est une méthode permettant à un utilisateur d'accéder à plusieurs applications informatiques (ou sites web sécurisés) en ne procédant qu'à une seule authentification. 
+    - https://fr.wikipedia.org/wiki/Authentification\_unique
   
 
 \end{enumerate}
