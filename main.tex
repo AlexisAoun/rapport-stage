@@ -4,13 +4,53 @@
 \usepackage[letterpaper, top=1.2in, bottom=1.2in, left=1.2in, right=1.2in, heightrounded]{geometry}
 \linespread {1.15}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \graphicspath{ {./assets/img} }
 \author {Alexis Aoun}
 \begin{document}
 \begin {sloppypar}
-\title {Stage Atos}
-\date {}
-\maketitle
+\begin{titlepage}
+  \begin{figure}
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{logo_atos.png}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=.4\linewidth]{logo_imt.png}
+  \end{subfigure}
+  \end{figure}
+  \begin{center}
+    \vspace*{1cm}
+    \huge
+    \textbf{Atos}\\
+    \vspace{0.5cm}
+    \LARGE 
+    A la pointe de la digitalisation
+    \vspace{2cm}
+    \includegraphics[width=15cm]{title.jpg} 
+    \vspace{2cm}
+    \normalsize
+    Rapport de Stage\\
+    AOUN Alexis - FISE 2023
+  \end{center}
+\end{titlepage}
+
+\newpage 
+
+\begin{center}
+  \LARGE
+  \textbf{Remerciements}
+  \vspace{5cm}\\
+  \normalsize
+  Un grand merci à\\ 
+  Giacomo Falzone, mon tuteur de stage\\
+  Valérie Rouvroy, \\
+  Florian Grember, \\
+  et Thibault Marhem \\
+  qui m'ont suivi et accompagné tout au long de mon stage
+\end{center}
 \newpage
 
 \def\contentsname{Sommaires}
